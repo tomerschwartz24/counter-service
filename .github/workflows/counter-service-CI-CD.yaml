@@ -10,6 +10,10 @@ env:
   ECR_REPOSITORY: tomer-counter-service
   AWS_REGION: eu-west-1
   IMAGE_TAG: ${{ github.sha }}
+  DOCKER_BUILDKIT: 1
+  BUILDKIT_PROGRESS: plain
+  BUILDKIT_INLINE_CACHE: 1
+  BUILDKIT_SESSION_TIMEOUT: 90s
 
 jobs:
   build-and-push:
@@ -33,7 +37,7 @@ jobs:
       - name: Build and tag Docker image
         id: build-image
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker buildx -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
 
       - name: Push Docker image to Amazon ECR
@@ -42,4 +46,3 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.build-image.outputs.image }}
-          timeout: 90s
