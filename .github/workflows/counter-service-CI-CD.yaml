@@ -42,3 +42,4 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.build-image.outputs.image }}
+          timeout: 90s
