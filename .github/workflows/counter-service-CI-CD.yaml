@@ -9,7 +9,7 @@ env:
   ECR_REGISTRY: 411202742861.dkr.ecr.eu-west-1.amazonaws.com
   ECR_REPOSITORY: tomer/counter-service
   AWS_REGION: eu-west-1
-  IMAGE_TAG: ${{ github.sha }}
+  IMAGE_TAG: latest
   DOCKER_BUILDKIT: 1
   BUILDKIT_PROGRESS: plain
   BUILDKIT_INLINE_CACHE: 1
