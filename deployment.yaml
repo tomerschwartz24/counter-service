@@ -16,7 +16,7 @@ spec:
       containers:
         - name: counter-service
          # image: <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-image-name>:<your-image-tag>
-          image: 411202742861.dkr.ecr.eu-west-1.amazonaws.com/tomer-counter-service
+          image: 411202742861.dkr.ecr.eu-west-1.amazonaws.com/tomer/counter-service:latest
 
           ports:
             - containerPort: 80
