@@ -17,9 +17,6 @@ spec:
         - name: counter-service
          # image: <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/<your-image-name>:<your-image-tag>
           image: 411202742861.dkr.ecr.eu-west-1.amazonaws.com/tomer/counter-service:latest
-
+          image: 384005890259.dkr.ecr.eu-central-1.amazonaws.com/production-images/counter-service:latest
           ports:
             - containerPort: 80
-          env:
-            - name: MY_ENV_VAR
-              value: "my-value"
