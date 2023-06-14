@@ -41,8 +41,8 @@ jobs:
       - name: Build and tag Docker image
         id: build-image
         run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:cs-prd${{ steps.determine-tag.outputs.tag }} .
-          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:cs-prd${{ steps.determine-tag.outputs.tag }}"
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:cs-prd-${{ steps.determine-tag.outputs.tag }} .
+          echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:cs-prd-${{ steps.determine-tag.outputs.tag }}"
 
       - name: Push Docker image to Amazon ECR
         uses: docker/build-push-action@v2
