@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  ECR_REGISTRY: 411202742861.dkr.ecr.eu-west-1.amazonaws.com
-  ECR_REPOSITORY: tomer/counter-service
+  ECR_REGISTRY: 384005890259.dkr.ecr.eu-central-1.amazonaws.com
+  ECR_REPOSITORY: prodrepo
   AWS_REGION: eu-west-1
   IMAGE_TAG: latest
   DOCKER_BUILDKIT: 1
