@@ -9,7 +9,7 @@ env:
   ECR_REGISTRY: 384005890259.dkr.ecr.eu-central-1.amazonaws.com
   ECR_REPOSITORY: production-images
   APPLICATION_NAME: counter-service
-  AWS_REGION: eu-west-1
+  AWS_REGION: eu-central-1
   IMAGE_TAG: latest
   DOCKER_BUILDKIT: 1
   BUILDKIT_PROGRESS: plain
