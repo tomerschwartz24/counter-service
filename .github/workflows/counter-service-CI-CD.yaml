@@ -36,7 +36,7 @@ jobs:
       - name: Determine image tag
         id: determine-tag
         run: |
-          echo "::set-output name=tag::$(date +'%Y%m%d%H')"
+          echo "::set-output name=tag::$(date +'%Y%m%d')"
 
       - name: Build and tag Docker image
         id: build-image
